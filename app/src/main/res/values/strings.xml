@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">database</string>
+    <string name="done">Done</string>
+    <string name="user_name">user name</string>
+    <string name="activity">activity</string>
+    <string name="temp">Temp</string>
+    <string name="insert">Insert:</string>
+    <string name="update">Update:</string>
+    <string name="delete">Delete:</string>
+    <string name="search">Search:</string>
+</resources>

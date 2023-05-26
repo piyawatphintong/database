@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/insertText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/smallMargin"
+        android:layout_marginTop="@dimen/normalMargin"
+        android:text="@string/insert"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/insertDataField"
+        layout="@layout/input_layout"
+        android:layout_marginStart="@dimen/_12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/insertText"
+        app:layout_constraintStart_toEndOf="@+id/insertText"
+        app:layout_constraintTop_toTopOf="@+id/insertText" />
+
+    <TextView
+        android:id="@+id/updateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/smallMargin"
+        android:layout_marginTop="@dimen/normalMargin"
+        android:text="@string/update"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/insertText" />
+
+    <include
+        android:id="@+id/updateDataField"
+        layout="@layout/input_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/updateText"
+        app:layout_constraintEnd_toEndOf="@+id/insertDataField"
+        app:layout_constraintStart_toStartOf="@+id/insertDataField"
+        app:layout_constraintTop_toTopOf="@+id/updateText" />
+
+    <TextView
+        android:id="@+id/deleteText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/smallMargin"
+        android:layout_marginTop="@dimen/normalMargin"
+        android:text="@string/delete"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/updateText" />
+    <EditText
+        android:id="@+id/deleteDataField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/user_name"
+        android:textSize="@dimen/normalTextSize"
+        app:layout_constraintBottom_toBottomOf="@+id/deleteText"
+        app:layout_constraintStart_toStartOf="@+id/updateDataField"
+        app:layout_constraintTop_toTopOf="@+id/deleteText" />
+
+    <Button
+        android:id="@+id/deleteButton"
+        android:layout_width="@dimen/_52dp"
+        android:layout_height="@dimen/_52dp"
+        android:layout_marginStart="@dimen/smallMargin"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
+        android:text="@string/done"
+        android:textSize="@dimen/_12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/deleteDataField"
+        app:layout_constraintStart_toEndOf="@+id/deleteDataField"
+        app:layout_constraintTop_toTopOf="@+id/deleteDataField" />
+
+    <TextView
+        android:id="@+id/searchText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/smallMargin"
+        android:layout_marginTop="@dimen/normalMargin"
+        android:text="@string/search"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deleteText" />
+
+    <EditText
+        android:id="@+id/nameSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/user_name"
+        android:textSize="@dimen/normalTextSize"
+        app:layout_constraintBottom_toBottomOf="@+id/searchText"
+        app:layout_constraintStart_toStartOf="@+id/deleteDataField"
+        app:layout_constraintTop_toTopOf="@+id/searchText" />
+
+    <Button
+        android:id="@+id/searchButton"
+        android:layout_width="@dimen/_52dp"
+        android:layout_height="@dimen/_52dp"
+        android:layout_marginStart="@dimen/smallMargin"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
+        android:text="@string/done"
+        android:textSize="@dimen/_12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/nameSearch"
+        app:layout_constraintStart_toEndOf="@+id/nameSearch"
+        app:layout_constraintTop_toTopOf="@+id/nameSearch" />
+
+    <Button
+        android:id="@+id/showAllButton"
+        android:layout_width="@dimen/_52dp"
+        android:layout_height="@dimen/_52dp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:layout_marginStart="@dimen/smallMargin"
+        android:text="Show all data"
+        android:textSize="@dimen/_12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/searchButton"
+        app:layout_constraintStart_toEndOf="@+id/searchButton"
+        app:layout_constraintTop_toTopOf="@+id/searchButton" />
+
+    <TextView
+        android:id="@+id/displayText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/normalMargin"
+        android:layout_marginTop="@dimen/normalMargin"
+        android:text="@string/temp"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchText"
+        android:visibility="invisible"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
