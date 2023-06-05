@@ -34,7 +34,6 @@ class MainActivity : AppCompatActivity() {
                 tempText = ""
                 for (user in users) {
                     tempText +="Name: ${user.userName}, Activity: ${user.userActivity}, Complete: ${user.isComplete}\n"
-                    Log.d("ok this is it", "fuck")
                 }
                 binding.displayText.text = tempText
                 binding.displayText.visibility = View.VISIBLE
